@@ -6,8 +6,8 @@ var uploadButton = document.getElementById('modalButton')
 function loadMarkers(map) {
   $.getJSON('http://localhost:5000/get_markers', function(markers) {
     for (var marker in markers) {
-      var lat = parseFloat(marker.split(',')[0]);
-      var lng = parseFloat(marker.split(',')[1]);
+      var lat = parseFloat(marker.split('_')[0]);
+      var lng = parseFloat(marker.split('_')[1]);
       var marker = new google.maps.Marker({
         position: {lat: lat, lng: lng},
         map: map,
