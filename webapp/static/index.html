@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css"></link>
+</head>
+<body>
+
+<div id=""><h3> Getting ARound </h3></div>
+<iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" id="closeBtn" data-dismiss="modal">&times; </button>
+            <h2 class="modal-title">Save Landmark</h2>
+        </div>
+        <div class="modal-body">
+            <form action="http://localhost:5000/upload_file" method="post" enctype="multipart/form-data" target="dummyframe">
+                <div>
+                <label for="coord">Marker co-ordinates:</label>
+                <br/>
+                <input name="coord" id="coord">
+              </div>
+              <div>
+                <label for="file">Audio file:</label>
+                <br/>
+                <input name="file" id="file" type="file">
+              </div>
+              <br/>
+              <div>
+                <button id="modalButton">Upload</button>
+              </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="map"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/map.js?v=2"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ6kIyihBQPFrRu2-zHisMQfZyGGITCx8&libraries=drawing&callback=initMap"
+            async defer></script>
+</body> 
