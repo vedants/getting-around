@@ -52,7 +52,6 @@ def get_markers():
 def send_audio(filename):
     return send_file('./audio/'+filename)
 
-
 @app.route('/')
 def map():
     return app.send_static_file('index.html')
