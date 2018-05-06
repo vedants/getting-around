@@ -42,7 +42,7 @@ public class DropMarkers : MonoBehaviour {
 	
 	void Update () {
 		muteMarkers = button.GetComponent<loadButton>().muteMarkers;
-		LineRenderer lineRenderer = GetComponent<LineRenderer>();
+//		LineRenderer lineRenderer = GetComponent<LineRenderer>();
 
 
 
@@ -50,8 +50,8 @@ public class DropMarkers : MonoBehaviour {
 			nextActionTime += period;
 			if (!muteMarkers) { //dropping marker mode
 
-				lineRenderer.SetPosition(lineRendererIndex, phone.transform.position);
-				lineRendererIndex++; 
+//				lineRenderer.SetPosition(lineRendererIndex, phone.transform.position);
+//				lineRendererIndex++; 
 
 				//update markers
 				foreach (GameObject orb in orbs) {
